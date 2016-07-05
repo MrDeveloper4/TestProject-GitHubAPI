@@ -1,12 +1,20 @@
 PODS:
+  - Realm (1.0.0):
+    - Realm/Headers (= 1.0.0)
+  - Realm/Headers (1.0.0)
+  - RealmSwift (1.0.0):
+    - Realm (= 1.0.0)
   - Whisper (3.0.0)
 
 DEPENDENCIES:
+  - RealmSwift
   - Whisper
 
 SPEC CHECKSUMS:
+  Realm: e15cd8e7c11d3e576f628ba0b7cb855269b4991c
+  RealmSwift: 3229306d020d96f83b335f87a0dcbf2cef0e6a2b
   Whisper: 42a3ee7c2936f861b23d41bd6cd7dfd22f102405
 
-PODFILE CHECKSUM: 334aa4c3c686eca6635cb75dd2acd9941936cdc7
+PODFILE CHECKSUM: 6cfb46db6178577d007e4a7db5791f284ea2c9b8
 
 COCOAPODS: 1.0.1

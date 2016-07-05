@@ -6,5 +6,6 @@ target 'TestProject-GitHubAPI' do
   use_frameworks!
 
   pod 'Whisper'
+  pod 'RealmSwift'
 
 end

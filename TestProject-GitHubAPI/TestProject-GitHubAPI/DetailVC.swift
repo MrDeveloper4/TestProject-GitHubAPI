@@ -10,6 +10,8 @@ import UIKit
 
 class DetailVC: UIViewController {
 
+    var currentUser : User!
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -41,6 +41,13 @@ class MainVC: UIViewController, UITextFieldDelegate {
         if (inputTextField.text == "") {
             showAlert("Text field is empty", color: UIColor.grayColor())
         }
+        
+        if let user = DataManager.returnUserById(inputTextField.text!) {
+            performSegueWithIdentifier("mainToDetail", sender: user)
+        } else{
+            
+        }
+        
     }
     
     // MARK: - Show alert
@@ -92,28 +99,17 @@ class MainVC: UIViewController, UITextFieldDelegate {
 
     // MARK: - Textfield
     @IBOutlet weak var inputTextField: UITextField!
-    func textFieldDidEndEditing(textField: UITextField) {
-//        print("TextField did end editing method called")
-//        if !(textField.text == nil) {
-//            let defaults = NSUserDefaults.standardUserDefaults()
-//            defaults.setObject(textField.text, forKey: memoreKey)
-//            defaults.synchronize()
-//            bottomState = .Registered
-//        }
-//        updateBottomButtons()
-//        //animateViewMoving(false, moveValue: keyBoardHeight - 46)
-    }
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder();
         return true;
     }
     
-    // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        
+        if segue.identifier == "mainToDetail" {
+            if let destinationVC = segue.destinationViewController as? DetailVC {
+                destinationVC.currentUser = sender as! User
+            }
+        }
     }
-    
 
 }
