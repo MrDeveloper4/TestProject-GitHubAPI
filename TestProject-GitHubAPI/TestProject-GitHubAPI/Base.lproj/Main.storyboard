@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestProject_GitHubAPI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="TestProject_GitHubAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -56,6 +56,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" id="wJh-tv-ddP"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="inputTextField" destination="5sp-Md-Lka" id="TAG-Vq-WeO"/>
                         <segue destination="Dh1-ST-jje" kind="show" identifier="mainToDetail" id="1lb-qj-XLW"/>
                     </connections>
                 </viewController>
@@ -63,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="1117" y="429"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailVC-->
         <scene sceneID="uze-0g-BhV">
             <objects>
-                <viewController id="Dh1-ST-jje" sceneMemberID="viewController">
+                <viewController id="Dh1-ST-jje" customClass="DetailVC" customModule="TestProject_GitHubAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="86C-fN-JCf"/>
                         <viewControllerLayoutGuide type="bottom" id="CYl-Ei-5w4"/>
@@ -79,7 +80,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="155" id="vyj-im-dEl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="155" id="vyj-im-dEl" customClass="HeaderCell" customModule="TestProject_GitHubAPI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vyj-im-dEl" id="4K5-S4-mbf">
@@ -152,8 +153,16 @@
                                                 <constraint firstItem="ZqJ-Yd-6dY" firstAttribute="trailing" secondItem="4K5-S4-mbf" secondAttribute="trailingMargin" id="sZx-LG-MML"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="followersCountLabel" destination="qJx-vA-AjK" id="JbO-ha-t1X"/>
+                                            <outlet property="followingCountLabel" destination="BTP-dc-sFn" id="EcE-2y-RT0"/>
+                                            <outlet property="publicGistsLabel" destination="A5n-er-19T" id="rK9-nf-t9v"/>
+                                            <outlet property="publicReposLabel" destination="L8Q-IV-FBD" id="1Wa-K0-rCY"/>
+                                            <outlet property="userAvatarImageView" destination="3cN-04-rYS" id="K4d-wD-frj"/>
+                                            <outlet property="userBioLabel" destination="ZqJ-Yd-6dY" id="JCG-5f-oN2"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="jpy-2u-VNi">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="jpy-2u-VNi" customClass="RepCell" customModule="TestProject_GitHubAPI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="247" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jpy-2u-VNi" id="d2k-5Q-fH1">
@@ -230,6 +239,12 @@
                                                 <constraint firstItem="K9I-KJ-pu8" firstAttribute="bottom" secondItem="d2k-5Q-fH1" secondAttribute="bottomMargin" id="ut9-Nk-SCb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="branchesLabel" destination="qWj-aa-M5b" id="PBJ-Ow-eLI"/>
+                                            <outlet property="languageLabel" destination="K9I-KJ-pu8" id="vIT-am-VEY"/>
+                                            <outlet property="repTitleLabel" destination="7ec-Uu-Hhw" id="Vwn-ME-hO4"/>
+                                            <outlet property="starsLabel" destination="RiJ-LA-uem" id="jVW-u1-udx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -239,6 +254,9 @@
                     <navigationItem key="navigationItem" id="fQj-v9-tAO">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="lil-3n-M8A"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Aea-OT-HNn" id="pWu-1S-dXh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPt-wo-dia" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
