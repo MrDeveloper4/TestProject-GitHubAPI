@@ -173,6 +173,7 @@
 				TargetAttributes = {
 					487DACC81D2C3C26006837FE = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5GRA9Q59XL;
 					};
 				};
 			};
@@ -383,6 +384,7 @@
 			baseConfigurationReference = 26CE1CA7E5CFA16889CF3F3D /* Pods-TestProject-GitHubAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "TestProject-GitHubAPI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "D4.TestProject-GitHubAPI";
@@ -395,6 +397,7 @@
 			baseConfigurationReference = CD188D015ED5A706523C91A8 /* Pods-TestProject-GitHubAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "TestProject-GitHubAPI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "D4.TestProject-GitHubAPI";

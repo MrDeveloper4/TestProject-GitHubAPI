@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Whisper
 
 class MainVC: UIViewController, UITextFieldDelegate {
 
     var keyBoardHeight : CGFloat!
     var animationDistance : CGFloat!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,37 @@ class MainVC: UIViewController, UITextFieldDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MainVC.keyboardShown(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MainVC.keyboardHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
+        inputTextField.delegate = self
+        
+        //set BarButton image
+        let button = UIButton(type: .Custom)
+        button.setImage(UIImage(named: "icon"), forState: UIControlState.Normal)
+        button.addTarget(self, action:nil, forControlEvents: UIControlEvents.TouchDragInside)
+        button.frame=CGRectMake(0, 0, 30, 30)
+        let barButton = UIBarButtonItem(customView: button)
+        self.navigationItem.leftBarButtonItem = barButton
+    }
+    
+    // MARK: - Button
+    @IBAction func buttonClick(sender: UIButton) {
+        if !WebManager.isConnectedToNetwork() {
+            showAlert("No internet connection", color: UIColor.redColor())
+            return
+        }
+        if (inputTextField.text == "") {
+            showAlert("Text field is empty", color: UIColor.grayColor())
+        }
+    }
+    
+    // MARK: - Show alert
+    func showAlert(text : String, color : UIColor) {
+        let message = Message(title: text, backgroundColor: color)
+        // Show and hide a message after delay
+        Whisper(message, to: navigationController!, action: .Show)
+        // Present a permanent message
+        Whisper(message, to: navigationController!, action: .Present)
+        // Hide a message
+        Silent(navigationController!)
     }
     
     // MARK: - KeyBoard
@@ -42,7 +75,9 @@ class MainVC: UIViewController, UITextFieldDelegate {
         let rawFrame = value.CGRectValue
         let keyboardFrame = view.convertRect(rawFrame, fromView: nil)
         keyBoardHeight = keyboardFrame.size.height
-        animateViewMoving(false, moveValue: animationDistance)
+        if let distance = animationDistance {
+            animateViewMoving(false, moveValue: distance)
+        }
     }
     
     func animateViewMoving (up:Bool, moveValue :CGFloat){
@@ -70,8 +105,7 @@ class MainVC: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-//        print("TextField should return method called")
-//        textField.resignFirstResponder();
+        textField.resignFirstResponder();
         return true;
     }
     

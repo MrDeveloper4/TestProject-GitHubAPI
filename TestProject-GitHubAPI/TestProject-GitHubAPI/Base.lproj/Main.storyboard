@@ -20,6 +20,7 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Input field" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5sp-Md-Lka">
                                 <rect key="frame" x="164" y="246" width="272" height="48"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="EWh-rW-VWY"/>
                                     <constraint firstAttribute="width" constant="272" id="wVh-xG-T2T"/>
@@ -39,7 +40,12 @@
                                     <constraint firstAttribute="height" constant="44" id="CMT-TX-rAM"/>
                                     <constraint firstAttribute="width" constant="240" id="LOw-ST-fkx"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yvU-yM-Z8o"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -53,7 +59,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iMy-l9-nDo">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="wJh-tv-ddP"/>
+                        <barButtonItem key="leftBarButtonItem" id="eFf-KU-AgV">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="inputTextField" destination="5sp-Md-Lka" id="TAG-Vq-WeO"/>
@@ -281,4 +289,5 @@
             <point key="canvasLocation" x="397" y="429"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.48675881410256405" green="0.48675881410256405" blue="0.48675881410256405" alpha="0.0" colorSpace="calibratedRGB"/>
 </document>

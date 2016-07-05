@@ -9,10 +9,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Whisper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9C6CF71E282A5BA80DD19A7E921D431A</key>
+		<key>60DD5AE61972B6E0FA49CD13B5ED7CA2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B212A9E5A14A8C330C3DD3DB06518496</key>
 		<dict>
 			<key>primary</key>
 			<true/>
