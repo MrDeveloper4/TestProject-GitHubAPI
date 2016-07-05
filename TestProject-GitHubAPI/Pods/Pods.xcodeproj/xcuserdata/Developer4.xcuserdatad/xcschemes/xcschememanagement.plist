@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TestProject-GitHubAPI.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Whisper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>014A975FF792DE299012805A62086A9B</key>
+		<key>13861F041FF7C2D38761AD4A593B180E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>14797832E33861155332E02E67F00D9C</key>
+		<key>2264CAABDC177EF2789FC4B9FA3BD13B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D72CE84EB7F9D524C1B760BD63A0B94</key>
+		<key>368203449BC1CE98289601001D0D2779</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C7BAC97E413FF48A9D7FECCED01CA477</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>82DCF44E742C952AFD5BB502D2FAB73B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3A607141DD9BCAFCA85F704B007206B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

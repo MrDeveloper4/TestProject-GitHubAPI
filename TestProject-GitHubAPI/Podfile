@@ -7,5 +7,7 @@ target 'TestProject-GitHubAPI' do
 
   pod 'Whisper'
   pod 'RealmSwift'
+  pod 'Alamofire', '~> 3.4'
+  pod 'SwiftyJSON'
 
 end
