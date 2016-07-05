@@ -61,14 +61,46 @@
 		487DACCB1D2C3C26006837FE /* TestProject-GitHubAPI */ = {
 			isa = PBXGroup;
 			children = (
-				487DACCC1D2C3C26006837FE /* AppDelegate.swift */,
-				487DACCE1D2C3C26006837FE /* ViewController.swift */,
-				487DACD01D2C3C26006837FE /* Main.storyboard */,
-				487DACD31D2C3C26006837FE /* Assets.xcassets */,
-				487DACD51D2C3C26006837FE /* LaunchScreen.storyboard */,
-				487DACD81D2C3C26006837FE /* Info.plist */,
+				487DACE11D2C3E0D006837FE /* Model */,
+				487DACE01D2C3E07006837FE /* View */,
+				487DACDF1D2C3E00006837FE /* Controller */,
+				487DACDE1D2C3DFB006837FE /* Other */,
 			);
 			path = "TestProject-GitHubAPI";
+			sourceTree = "<group>";
+		};
+		487DACDE1D2C3DFB006837FE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				487DACD51D2C3C26006837FE /* LaunchScreen.storyboard */,
+				487DACD81D2C3C26006837FE /* Info.plist */,
+				487DACD31D2C3C26006837FE /* Assets.xcassets */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		487DACDF1D2C3E00006837FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				487DACCE1D2C3C26006837FE /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		487DACE01D2C3E07006837FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				487DACD01D2C3C26006837FE /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		487DACE11D2C3E0D006837FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				487DACCC1D2C3C26006837FE /* AppDelegate.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		8ADBBC9DF3D776A0FE8418C0 /* Frameworks */ = {
