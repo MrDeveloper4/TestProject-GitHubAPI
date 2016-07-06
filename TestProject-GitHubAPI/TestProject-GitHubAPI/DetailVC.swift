@@ -77,7 +77,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func openInBrowserClicked() {
         if !WebManager.isConnectedToNetwork() {
-            showAlert("No internet connection", color: UIColor.redColor())
+            showAlert("No internet connection")
             return
         }
         let browser = KAWebBrowser()
@@ -112,16 +112,5 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         // Hide a message
         Calm()
     }
-    
-    func showAlert(text : String, color : UIColor) {
-        let message = Message(title: text, backgroundColor: color)
-        // Show and hide a message after delay
-        Whisper(message, to: navigationController!, action: .Show)
-        // Present a permanent message
-        Whisper(message, to: navigationController!, action: .Present)
-        // Hide a message
-        Silent(navigationController!)
-    }
-
     
 }
