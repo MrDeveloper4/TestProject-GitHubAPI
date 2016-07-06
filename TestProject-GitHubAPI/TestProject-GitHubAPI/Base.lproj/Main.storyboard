@@ -269,9 +269,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fQj-v9-tAO">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="lil-3n-M8A"/>
+                        <barButtonItem key="rightBarButtonItem" image="menu" id="lil-3n-M8A">
+                            <connections>
+                                <action selector="barButtonDidPress:" destination="Dh1-ST-jje" id="XWp-va-abc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="barButton" destination="lil-3n-M8A" id="Lge-u1-sRd"/>
                         <outlet property="tableView" destination="Aea-OT-HNn" id="pWu-1S-dXh"/>
                     </connections>
                 </viewController>
@@ -300,6 +305,7 @@
     </scenes>
     <resources>
         <image name="branch" width="30" height="30"/>
+        <image name="menu" width="5" height="20"/>
         <image name="star" width="30" height="29"/>
     </resources>
     <color key="tintColor" red="0.48675881410256405" green="0.48675881410256405" blue="0.48675881410256405" alpha="1" colorSpace="calibratedRGB"/>

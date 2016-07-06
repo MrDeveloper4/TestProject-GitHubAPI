@@ -48,5 +48,10 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return cell
         }
     }
+    
+    //MARK: - BarButtonItem
+    @IBOutlet weak var barButton: UIBarButtonItem!
+    @IBAction func barButtonDidPress(sender: UIBarButtonItem) {
+    }
 
 }

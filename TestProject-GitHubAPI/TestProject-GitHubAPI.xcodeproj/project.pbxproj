@@ -108,6 +108,7 @@
 				487DACD01D2C3C26006837FE /* Main.storyboard */,
 				487DACEA1D2C43CC006837FE /* HeaderCell.swift */,
 				487DACEC1D2C43D9006837FE /* RepCell.swift */,
+				487DACF21D2CECE5006837FE /* Box menu */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -122,6 +123,13 @@
 				487DACF01D2C56C3006837FE /* Project.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		487DACF21D2CECE5006837FE /* Box menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Box menu";
 			sourceTree = "<group>";
 		};
 		8ADBBC9DF3D776A0FE8418C0 /* Frameworks */ = {
