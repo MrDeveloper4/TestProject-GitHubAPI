@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HeaderCell: UITableViewCell {
 
@@ -17,4 +18,12 @@ class HeaderCell: UITableViewCell {
     @IBOutlet weak var publicGistsLabel: UILabel!
     @IBOutlet weak var publicReposLabel: UILabel!
 
+    func configureWithUser(user : User) {
+        self.userAvatarImageView.sd_setImageWithURL(NSURL(string: user.userAvatarImageView), placeholderImage: UIImage.init(named: "placeholder"))
+        self.userBioLabel.text = user.userBioLabel
+        self.followersCountLabel.text = "Followers - \(user.followersCountLabel)"
+        self.followingCountLabel.text = "Following - \(user.followingCountLabel)"
+        self.publicGistsLabel.text = "Public gists - \(user.publicGistsLabel)"
+        self.publicReposLabel.text = "Public repos - \(user.publicReposLabel)"
+    }
 }

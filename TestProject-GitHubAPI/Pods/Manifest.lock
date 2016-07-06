@@ -6,6 +6,9 @@ PODS:
   - Realm/Headers (1.0.0)
   - RealmSwift (1.0.0):
     - Realm (= 1.0.0)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
   - SwiftyJSON (2.3.2)
   - Whisper (3.0.0)
 
@@ -13,6 +16,7 @@ DEPENDENCIES:
   - Alamofire (~> 3.4)
   - NVActivityIndicatorView
   - RealmSwift
+  - SDWebImage
   - SwiftyJSON
   - Whisper
 
@@ -21,9 +25,10 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: dc80f18fb27ac92f0aa87246cc13dc39ed3e9ee0
   Realm: e15cd8e7c11d3e576f628ba0b7cb855269b4991c
   RealmSwift: 3229306d020d96f83b335f87a0dcbf2cef0e6a2b
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   Whisper: 42a3ee7c2936f861b23d41bd6cd7dfd22f102405
 
-PODFILE CHECKSUM: 4ba82151853aab072cd94dd6d1f9e498405c1e48
+PODFILE CHECKSUM: bbe227ebdae4626ef0e6ac9b9b6d13ef0416e834
 
 COCOAPODS: 1.0.1

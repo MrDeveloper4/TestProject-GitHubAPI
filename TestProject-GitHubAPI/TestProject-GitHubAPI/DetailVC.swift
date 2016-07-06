@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailVC: UIViewController {
+class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var currentUser : User!
     
@@ -16,7 +16,37 @@ class DetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.edgesForExtendedLayout = UIRectEdge.None
+    }
+    
+    //MARK: - TableView
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return currentUser.repositories.count + 1
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 179
+        } else {
+            return 80
+        }
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("cell0") as! HeaderCell!
+            cell.selectionStyle = .None
+            cell.configureWithUser(currentUser)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("cell1") as! RepCell!
+            cell.selectionStyle = .None
+            cell.configureWithRep(currentUser.repositories[indexPath.row - 1])
+            return cell
+        }
     }
 
 }

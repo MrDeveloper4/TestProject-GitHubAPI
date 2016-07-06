@@ -15,4 +15,11 @@ class RepCell: UITableViewCell {
     @IBOutlet weak var starsLabel: UILabel!
     @IBOutlet weak var branchesLabel: UILabel!
 
+    func configureWithRep(project : Project) {
+        self.repTitleLabel.text = project.repTitleLabel
+        self.languageLabel.text = project.languageLabel
+        self.starsLabel.text    = "\(project.starsLabel)"
+        self.branchesLabel.text = "\(project.branchesLabel)"
+    }
+    
 }

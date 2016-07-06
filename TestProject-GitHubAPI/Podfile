@@ -10,5 +10,6 @@ target 'TestProject-GitHubAPI' do
   pod 'Alamofire', '~> 3.4'
   pod 'SwiftyJSON'
   pod 'NVActivityIndicatorView'
+  pod 'SDWebImage'
 
 end
