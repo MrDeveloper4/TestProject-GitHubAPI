@@ -38,10 +38,6 @@ class MainVC: UIViewController, UITextFieldDelegate {
     
     // MARK: - Button
     @IBAction func buttonClick(sender: UIButton) {
-        if !WebManager.isConnectedToNetwork() {
-            showAlert("No internet connection", color: UIColor.redColor())
-            return
-        }
         if (inputTextField.text == "") {
             showAlert("Text field is empty", color: UIColor.grayColor())
             return
@@ -50,6 +46,10 @@ class MainVC: UIViewController, UITextFieldDelegate {
         if let user = DataManager.returnUserById(inputTextField.text!) {
             performSegueWithIdentifier("mainToDetail", sender: user)
         } else{
+            if !WebManager.isConnectedToNetwork() {
+                showAlert("No internet connection", color: UIColor.redColor())
+                return
+            }
             indicator.startAnimation()
             WebManager.getUserById(inputTextField.text!, completion: { (user) in
                 self.indicator.stopAnimation()

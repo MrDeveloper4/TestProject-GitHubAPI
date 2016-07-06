@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="height" constant="44" id="CMT-TX-rAM"/>
                                     <constraint firstAttribute="width" constant="240" id="LOw-ST-fkx"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Search">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -102,12 +102,6 @@
                                                         <constraint firstAttribute="height" constant="125" id="K3m-b0-2oj"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repositories list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vp9-f2-PXs">
-                                                    <rect key="frame" x="8" y="148" width="125" height="22"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqJ-Yd-6dY">
                                                     <rect key="frame" x="153" y="4" width="439" height="53"/>
                                                     <constraints>
@@ -141,6 +135,22 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repositories list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vp9-f2-PXs">
+                                                    <rect key="frame" x="8" y="148" width="125" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEf-J4-YdH">
+                                                    <rect key="frame" x="443" y="143" width="149" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <state key="normal" title="Delete from database">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteButtonDidPress:" destination="vyj-im-dEl" eventType="touchUpInside" id="U02-t6-pew"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="A5n-er-19T" firstAttribute="leading" secondItem="3cN-04-rYS" secondAttribute="trailing" constant="20" id="0fy-vW-qyX"/>
@@ -153,6 +163,7 @@
                                                 <constraint firstItem="L8Q-IV-FBD" firstAttribute="top" secondItem="A5n-er-19T" secondAttribute="bottom" id="LTA-6a-1RZ"/>
                                                 <constraint firstItem="qJx-vA-AjK" firstAttribute="top" secondItem="ZqJ-Yd-6dY" secondAttribute="bottom" constant="8" id="LsV-mY-5GS"/>
                                                 <constraint firstItem="qJx-vA-AjK" firstAttribute="leading" secondItem="3cN-04-rYS" secondAttribute="trailing" constant="20" id="MIO-hr-dkU"/>
+                                                <constraint firstItem="GEf-J4-YdH" firstAttribute="trailing" secondItem="4K5-S4-mbf" secondAttribute="trailingMargin" id="RVS-UU-tC7"/>
                                                 <constraint firstItem="L8Q-IV-FBD" firstAttribute="leading" secondItem="3cN-04-rYS" secondAttribute="trailing" constant="20" id="TTJ-6u-pHm"/>
                                                 <constraint firstItem="BTP-dc-sFn" firstAttribute="top" secondItem="qJx-vA-AjK" secondAttribute="bottom" id="VAU-aa-oUr"/>
                                                 <constraint firstItem="BTP-dc-sFn" firstAttribute="trailing" secondItem="4K5-S4-mbf" secondAttribute="trailingMargin" id="e2K-Kj-keN"/>
@@ -161,10 +172,12 @@
                                                 <constraint firstItem="3cN-04-rYS" firstAttribute="top" secondItem="4K5-S4-mbf" secondAttribute="topMargin" id="gQx-cC-QwJ"/>
                                                 <constraint firstItem="3cN-04-rYS" firstAttribute="leading" secondItem="4K5-S4-mbf" secondAttribute="leadingMargin" id="lgM-ft-HAD"/>
                                                 <constraint firstItem="ZqJ-Yd-6dY" firstAttribute="top" secondItem="4K5-S4-mbf" secondAttribute="topMargin" constant="-4" id="rT1-zg-PvA"/>
+                                                <constraint firstItem="GEf-J4-YdH" firstAttribute="bottom" secondItem="4K5-S4-mbf" secondAttribute="bottomMargin" constant="6" id="rpd-0g-Zg9"/>
                                                 <constraint firstItem="ZqJ-Yd-6dY" firstAttribute="trailing" secondItem="4K5-S4-mbf" secondAttribute="trailingMargin" id="sZx-LG-MML"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="deleteButton" destination="GEf-J4-YdH" id="IVA-Sy-mQw"/>
                                             <outlet property="followersCountLabel" destination="qJx-vA-AjK" id="JbO-ha-t1X"/>
                                             <outlet property="followingCountLabel" destination="BTP-dc-sFn" id="EcE-2y-RT0"/>
                                             <outlet property="publicGistsLabel" destination="A5n-er-19T" id="rK9-nf-t9v"/>

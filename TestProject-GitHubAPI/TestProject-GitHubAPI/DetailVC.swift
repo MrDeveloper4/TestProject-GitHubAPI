@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Whisper
 
 class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -75,12 +76,52 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func openInBrowserClicked() {
-        
+        if !WebManager.isConnectedToNetwork() {
+            showAlert("No internet connection", color: UIColor.redColor())
+            return
+        }
+        let browser = KAWebBrowser()
+        showViewController(browser, sender: nil)
+        browser.loadURLString("https://github.com/\(currentUser.id.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()))")
     }
     func saveClicked() {
-        
+        DataManager.addUser(currentUser)
+        let cell = tableView.cellForRowAtIndexPath(NSIndexPath.init(forRow: 0, inSection: 0)) as! HeaderCell
+        cell.deleteButton.alpha = 1
+        showAlert("User saved to database")
     }
+    
     func shareClicked() {
+        let textToShare = "Awesome GitHub user."
+        let link = NSURL(string: "https://github.com/\(currentUser.id.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()))")
         
+        let activityViewController = UIActivityViewController(
+            activityItems: [textToShare, link!],
+            applicationActivities: nil)
+        
+        presentViewController(activityViewController, animated: true, completion: nil)
     }
+    
+    // MARK: - Alert
+    func showAlert(text : String) {
+        let murmur = Murmur(title: text)
+        // Show and hide a message after delay
+        Whistle(murmur) // Whistle(murmur, action: .Show(1.5))
+        // Present a permanent status bar message
+        Whistle(murmur, action: .Present)
+        // Hide a message
+        Calm()
+    }
+    
+    func showAlert(text : String, color : UIColor) {
+        let message = Message(title: text, backgroundColor: color)
+        // Show and hide a message after delay
+        Whisper(message, to: navigationController!, action: .Show)
+        // Present a permanent message
+        Whisper(message, to: navigationController!, action: .Present)
+        // Hide a message
+        Silent(navigationController!)
+    }
+
+    
 }

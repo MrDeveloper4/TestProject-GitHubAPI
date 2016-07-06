@@ -20,6 +20,7 @@
 		487DACEF1D2C53C2006837FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487DACEE1D2C53C2006837FE /* User.swift */; };
 		487DACF11D2C56C3006837FE /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487DACF01D2C56C3006837FE /* Project.swift */; };
 		487DACF61D2CED4A006837FE /* NirKxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 487DACF51D2CED4A006837FE /* NirKxMenu.m */; };
+		487DACF91D2CF340006837FE /* KAWebBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487DACF81D2CF340006837FE /* KAWebBrowser.swift */; };
 		B290891D3A3E31FC786EFF17 /* Pods_TestProject_GitHubAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BA2CCB45FE2B94B5A32BD8 /* Pods_TestProject_GitHubAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		487DACF31D2CED49006837FE /* TestProject-GitHubAPI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestProject-GitHubAPI-Bridging-Header.h"; sourceTree = "<group>"; };
 		487DACF41D2CED4A006837FE /* NirKxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NirKxMenu.h; sourceTree = "<group>"; };
 		487DACF51D2CED4A006837FE /* NirKxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NirKxMenu.m; sourceTree = "<group>"; };
+		487DACF81D2CF340006837FE /* KAWebBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KAWebBrowser.swift; sourceTree = "<group>"; };
 		91BA2CCB45FE2B94B5A32BD8 /* Pods_TestProject_GitHubAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestProject_GitHubAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD188D015ED5A706523C91A8 /* Pods-TestProject-GitHubAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProject-GitHubAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestProject-GitHubAPI/Pods-TestProject-GitHubAPI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				487DACD01D2C3C26006837FE /* Main.storyboard */,
 				487DACEA1D2C43CC006837FE /* HeaderCell.swift */,
 				487DACEC1D2C43D9006837FE /* RepCell.swift */,
+				487DACF71D2CF321006837FE /* Custom Browser */,
 				487DACF21D2CECE5006837FE /* Box menu */,
 			);
 			name = View;
@@ -137,6 +140,14 @@
 				487DACF31D2CED49006837FE /* TestProject-GitHubAPI-Bridging-Header.h */,
 			);
 			name = "Box menu";
+			sourceTree = "<group>";
+		};
+		487DACF71D2CF321006837FE /* Custom Browser */ = {
+			isa = PBXGroup;
+			children = (
+				487DACF81D2CF340006837FE /* KAWebBrowser.swift */,
+			);
+			name = "Custom Browser";
 			sourceTree = "<group>";
 		};
 		8ADBBC9DF3D776A0FE8418C0 /* Frameworks */ = {
@@ -280,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				487DACE71D2C439C006837FE /* MainVC.swift in Sources */,
+				487DACF91D2CF340006837FE /* KAWebBrowser.swift in Sources */,
 				487DACE51D2C438B006837FE /* DataManager.swift in Sources */,
 				487DACF11D2C56C3006837FE /* Project.swift in Sources */,
 				487DACF61D2CED4A006837FE /* NirKxMenu.m in Sources */,

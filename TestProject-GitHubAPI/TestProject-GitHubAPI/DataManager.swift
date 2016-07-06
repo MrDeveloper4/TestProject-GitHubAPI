@@ -10,16 +10,6 @@ import UIKit
 import RealmSwift
 
 class DataManager: NSObject {
-
-    class func isEmpty() -> Bool {
-        let realm = try! Realm()
-        let users = realm.objects(User.self)
-        if users == 0 {
-            return true
-        } else{
-            return false
-        }
-    }
     
     class func returnUserById(id : String) -> User? {
         let realm = try! Realm()
@@ -33,9 +23,8 @@ class DataManager: NSObject {
     
     class func addUser(user : User) {
         let realm = try! Realm()
-        let usersArray = realm.objects(User.self).filter("id = '\(user.id)'")
         try! realm.write {
-            realm.add(usersArray[0], update: true)
+            realm.add(user, update: true)
         }
         //If user is in a dataBase we simply update the info
     }
