@@ -37,6 +37,7 @@ class MainVC: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: - Button
+    @IBOutlet weak var searchButton: UIButton!
     @IBAction func buttonClick(sender: UIButton) {
         if (inputTextField.text == "") {
             showAlert("Text field is empty", color: UIColor.grayColor())

@@ -44,6 +44,10 @@
 		487DACF41D2CED4A006837FE /* NirKxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NirKxMenu.h; sourceTree = "<group>"; };
 		487DACF51D2CED4A006837FE /* NirKxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NirKxMenu.m; sourceTree = "<group>"; };
 		487DACF81D2CF340006837FE /* KAWebBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KAWebBrowser.swift; sourceTree = "<group>"; };
+		487DACFA1D2D0055006837FE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		487DACFB1D2D0055006837FE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		487DACFC1D2D005D006837FE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		487DACFD1D2D005D006837FE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		91BA2CCB45FE2B94B5A32BD8 /* Pods_TestProject_GitHubAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestProject_GitHubAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD188D015ED5A706523C91A8 /* Pods-TestProject-GitHubAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProject-GitHubAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestProject-GitHubAPI/Pods-TestProject-GitHubAPI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -311,6 +315,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				487DACD11D2C3C26006837FE /* Base */,
+				487DACFA1D2D0055006837FE /* fr */,
+				487DACFC1D2D005D006837FE /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -319,6 +325,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				487DACD61D2C3C26006837FE /* Base */,
+				487DACFB1D2D0055006837FE /* fr */,
+				487DACFD1D2D005D006837FE /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

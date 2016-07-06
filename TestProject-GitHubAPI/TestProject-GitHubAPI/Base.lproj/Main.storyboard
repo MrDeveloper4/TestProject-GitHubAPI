@@ -65,6 +65,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="inputTextField" destination="5sp-Md-Lka" id="TAG-Vq-WeO"/>
+                        <outlet property="searchButton" destination="LNg-f5-1wc" id="sV0-Bm-vj1"/>
                         <segue destination="Dh1-ST-jje" kind="show" identifier="mainToDetail" id="1lb-qj-XLW"/>
                     </connections>
                 </viewController>

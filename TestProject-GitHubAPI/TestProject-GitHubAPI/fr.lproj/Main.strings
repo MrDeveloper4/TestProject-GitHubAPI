@@ -1,0 +1,15 @@
+
+/* Class = "UITextField"; placeholder = "Input field"; ObjectID = "5sp-Md-Lka"; */
+"5sp-Md-Lka.placeholder" = "Champ de saisie";
+
+/* Class = "UIButton"; normalTitle = "Delete from database"; ObjectID = "GEf-J4-YdH"; */
+"GEf-J4-YdH.normalTitle" = "Supprimer la base de données";
+
+/* Class = "UILabel"; text = "Input user name to know more(hint)"; ObjectID = "KPq-Ji-S5P"; */
+"KPq-Ji-S5P.text" = "nom d'utilisateur d'entrée";
+
+/* Class = "UIButton"; normalTitle = "Search"; ObjectID = "LNg-f5-1wc"; */
+"LNg-f5-1wc.normalTitle" = "Chercher";
+
+/* Class = "UILabel"; text = "Repositories list"; ObjectID = "vp9-f2-PXs"; */
+"vp9-f2-PXs.text" = "liste Référentiels";
