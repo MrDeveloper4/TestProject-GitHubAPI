@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--MainVC-->
+        <!--Test Project-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="TestProject_GitHubAPI" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,7 +60,7 @@
                             <constraint firstItem="5sp-Md-Lka" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vNa-O9-rc9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iMy-l9-nDo">
+                    <navigationItem key="navigationItem" title="Test Project" id="iMy-l9-nDo">
                         <barButtonItem key="leftBarButtonItem" id="eFf-KU-AgV">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                         </barButtonItem>
