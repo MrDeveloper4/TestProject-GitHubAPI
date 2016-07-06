@@ -19,6 +19,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         self.edgesForExtendedLayout = UIRectEdge.None
+        navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
     }
     
     //MARK: - TableView
@@ -52,6 +53,34 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //MARK: - BarButtonItem
     @IBOutlet weak var barButton: UIBarButtonItem!
     @IBAction func barButtonDidPress(sender: UIBarButtonItem) {
+        let menuArray = [KxMenuItem.init("Open in browser", image: nil, target: self, action: #selector(DetailVC.openInBrowserClicked)),
+                         KxMenuItem.init("Save", image: UIImage(named: "Touch"), target: self, action: #selector(DetailVC.saveClicked)),
+                         KxMenuItem.init("Share", image: UIImage(named: "Touch"), target: self, action: #selector(DetailVC.shareClicked))]
+        
+        KxMenu.setTitleFont(UIFont(name: "AvenirNext", size: 15))
+        
+        let options = OptionalConfiguration(arrowSize: 9,
+            marginXSpacing: 7,
+            marginYSpacing: 9,
+            intervalSpacing: 25,
+            menuCornerRadius: 6.5,
+            maskToBackground: true,
+            shadowOfMenu: false,
+            hasSeperatorLine: true,
+            seperatorLineHasInsets: false,
+            textColor: Color(R: 0, G: 0, B: 0),
+            menuBackgroundColor: Color(R: 1, G: 1, B: 1))
+        
+        KxMenu.showMenuInView(self.view, fromRect: CGRectMake(view.bounds.size.width - 20, 5, 1, 1), menuItems: menuArray, withOptions: options)
     }
-
+    
+    func openInBrowserClicked() {
+        
+    }
+    func saveClicked() {
+        
+    }
+    func shareClicked() {
+        
+    }
 }

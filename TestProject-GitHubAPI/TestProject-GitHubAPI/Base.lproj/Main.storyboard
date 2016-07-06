@@ -292,6 +292,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fq3-US-hp1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -308,5 +309,5 @@
         <image name="menu" width="5" height="20"/>
         <image name="star" width="30" height="29"/>
     </resources>
-    <color key="tintColor" red="0.48675881410256405" green="0.48675881410256405" blue="0.48675881410256405" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.48675881410256405" green="0.48675881410256405" blue="0.48675881410256405" alpha="0.0" colorSpace="calibratedRGB"/>
 </document>

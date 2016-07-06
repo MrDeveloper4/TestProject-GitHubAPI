@@ -19,6 +19,7 @@
 		487DACED1D2C43D9006837FE /* RepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487DACEC1D2C43D9006837FE /* RepCell.swift */; };
 		487DACEF1D2C53C2006837FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487DACEE1D2C53C2006837FE /* User.swift */; };
 		487DACF11D2C56C3006837FE /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487DACF01D2C56C3006837FE /* Project.swift */; };
+		487DACF61D2CED4A006837FE /* NirKxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 487DACF51D2CED4A006837FE /* NirKxMenu.m */; };
 		B290891D3A3E31FC786EFF17 /* Pods_TestProject_GitHubAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BA2CCB45FE2B94B5A32BD8 /* Pods_TestProject_GitHubAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,9 @@
 		487DACEC1D2C43D9006837FE /* RepCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepCell.swift; sourceTree = "<group>"; };
 		487DACEE1D2C53C2006837FE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		487DACF01D2C56C3006837FE /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		487DACF31D2CED49006837FE /* TestProject-GitHubAPI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestProject-GitHubAPI-Bridging-Header.h"; sourceTree = "<group>"; };
+		487DACF41D2CED4A006837FE /* NirKxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NirKxMenu.h; sourceTree = "<group>"; };
+		487DACF51D2CED4A006837FE /* NirKxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NirKxMenu.m; sourceTree = "<group>"; };
 		91BA2CCB45FE2B94B5A32BD8 /* Pods_TestProject_GitHubAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestProject_GitHubAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD188D015ED5A706523C91A8 /* Pods-TestProject-GitHubAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProject-GitHubAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestProject-GitHubAPI/Pods-TestProject-GitHubAPI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +132,9 @@
 		487DACF21D2CECE5006837FE /* Box menu */ = {
 			isa = PBXGroup;
 			children = (
+				487DACF41D2CED4A006837FE /* NirKxMenu.h */,
+				487DACF51D2CED4A006837FE /* NirKxMenu.m */,
+				487DACF31D2CED49006837FE /* TestProject-GitHubAPI-Bridging-Header.h */,
 			);
 			name = "Box menu";
 			sourceTree = "<group>";
@@ -275,6 +282,7 @@
 				487DACE71D2C439C006837FE /* MainVC.swift in Sources */,
 				487DACE51D2C438B006837FE /* DataManager.swift in Sources */,
 				487DACF11D2C56C3006837FE /* Project.swift in Sources */,
+				487DACF61D2CED4A006837FE /* NirKxMenu.m in Sources */,
 				487DACCD1D2C3C26006837FE /* AppDelegate.swift in Sources */,
 				487DACE31D2C437B006837FE /* WebManager.swift in Sources */,
 				487DACEF1D2C53C2006837FE /* User.swift in Sources */,
@@ -396,11 +404,14 @@
 			baseConfigurationReference = 26CE1CA7E5CFA16889CF3F3D /* Pods-TestProject-GitHubAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "TestProject-GitHubAPI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "D4.TestProject-GitHubAPI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestProject-GitHubAPI/TestProject-GitHubAPI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -409,11 +420,13 @@
 			baseConfigurationReference = CD188D015ED5A706523C91A8 /* Pods-TestProject-GitHubAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "TestProject-GitHubAPI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "D4.TestProject-GitHubAPI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestProject-GitHubAPI/TestProject-GitHubAPI-Bridging-Header.h";
 			};
 			name = Release;
 		};
