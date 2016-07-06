@@ -10,7 +10,6 @@ import UIKit
 
 class HeaderCell: UITableViewCell {
 
-
     @IBOutlet weak var userAvatarImageView: UIImageView!
     @IBOutlet weak var userBioLabel: UILabel!
     @IBOutlet weak var followersCountLabel: UILabel!

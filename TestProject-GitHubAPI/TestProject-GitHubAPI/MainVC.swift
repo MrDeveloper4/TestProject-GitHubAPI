@@ -8,12 +8,13 @@
 
 import UIKit
 import Whisper
+import NVActivityIndicatorView
 
 class MainVC: UIViewController, UITextFieldDelegate {
 
     var keyBoardHeight : CGFloat!
     var animationDistance : CGFloat!
-    
+    var indicator : NVActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,9 @@ class MainVC: UIViewController, UITextFieldDelegate {
         button.frame=CGRectMake(0, 0, 30, 30)
         let barButton = UIBarButtonItem(customView: button)
         self.navigationItem.leftBarButtonItem = barButton
+        
+        indicator = NVActivityIndicatorView(frame: CGRectMake(view.frame.size.width / 2 - 30, view.frame.size.height / 2 , 60, 60), type: .Pacman, color: UIColor.redColor(), padding: 0)
+        view.addSubview(indicator)
     }
     
     // MARK: - Button
@@ -40,17 +44,26 @@ class MainVC: UIViewController, UITextFieldDelegate {
         }
         if (inputTextField.text == "") {
             showAlert("Text field is empty", color: UIColor.grayColor())
+            return
         }
         
         if let user = DataManager.returnUserById(inputTextField.text!) {
             performSegueWithIdentifier("mainToDetail", sender: user)
         } else{
-            
+            indicator.startAnimation()
+            WebManager.getUserById(inputTextField.text!, completion: { (user) in
+                self.indicator.stopAnimation()
+                if user != nil {
+                    self.performSegueWithIdentifier("mainToDetail", sender: user)
+                } else {
+                    self.showAlert("This user doesn't exist", color: UIColor.redColor())
+                }
+            })
         }
         
     }
     
-    // MARK: - Show alert
+    // MARK: - Alert
     func showAlert(text : String, color : UIColor) {
         let message = Message(title: text, backgroundColor: color)
         // Show and hide a message after delay

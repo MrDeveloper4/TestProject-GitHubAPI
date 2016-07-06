@@ -12,8 +12,8 @@ import RealmSwift
 class Project: Object {
     dynamic var repTitleLabel = ""
     dynamic var languageLabel = ""
-    dynamic var starsLabel = ""
-    dynamic var branchesLabel = ""
+    dynamic var starsLabel = 0
+    dynamic var branchesLabel = 0
     
     override static func primaryKey() -> String? {
         return "repTitleLabel"

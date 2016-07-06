@@ -9,5 +9,6 @@ target 'TestProject-GitHubAPI' do
   pod 'RealmSwift'
   pod 'Alamofire', '~> 3.4'
   pod 'SwiftyJSON'
+  pod 'NVActivityIndicatorView'
 
 end

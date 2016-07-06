@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NVActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TestProject-GitHubAPI.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>13861F041FF7C2D38761AD4A593B180E</key>
+		<key>038780E750E14AAFB85241AEACDD875D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2264CAABDC177EF2789FC4B9FA3BD13B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>368203449BC1CE98289601001D0D2779</key>
+		<key>2E55C65A5615EFD412F2C311E5AD39CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>82DCF44E742C952AFD5BB502D2FAB73B</key>
+		<key>AE9F8BDD003C6CFD965179F49564DFDA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E3A607141DD9BCAFCA85F704B007206B</key>
+		<key>BDDC4DBF7654960710F7FF7B28F35033</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBBCEB0E2C5F93B14A2AA5C884CD1740</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8C9ADF062087CAFE788D5D7B0C3B6CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

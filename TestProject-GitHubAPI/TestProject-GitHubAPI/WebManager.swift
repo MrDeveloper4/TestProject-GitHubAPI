@@ -9,6 +9,8 @@
 import UIKit
 import SystemConfiguration
 import Alamofire
+import SwiftyJSON
+import RealmSwift
 
 class WebManager: NSObject {
 
@@ -30,17 +32,62 @@ class WebManager: NSObject {
         return (isReachable && !needsConnection)
     }
     
-    class func getUserById(id: String, completion : ()->()) {
-        Alamofire.request(.GET, baseURL + "users/" + id, parameters: nil)
+    class func getUserById(id: String, completion : (user : User?)->()) {
+        let urlString = baseURL + "users/" + id.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
+        Alamofire.request(.GET, NSURL(string: urlString)!, parameters: nil)
             .validate()
             .responseJSON { response in
                 switch response.result {
                 case .Success:
-                    print("Validation Successful")
+                    if let value = response.result.value {
+                        let json = JSON(value)
+                        let user = User()
+                        user.id = id
+                        user.userAvatarImageView = json["avatar_url"].string!
+                        user.userBioLabel = json["name"].string! + ", " + json["company"].stringValue + ", " + json["email"].stringValue
+                        user.followersCountLabel = json["followers"].int!
+                        user.followingCountLabel = json["following"].int!
+                        user.publicGistsLabel = json["public_gists"].int!
+                        user.publicReposLabel = json["public_repos"].int!
+                        
+                        //----Get Repositories
+                        let urlString = json["repos_url"].string!
+                        
+                        Alamofire.request(.GET, NSURL(string: urlString)!, parameters: nil)
+                            .validate()
+                            .responseJSON { response in
+                                switch response.result {
+                                case .Success:
+                                    if let value = response.result.value {
+                                        let json = JSON(value)
+                                        for (_, value) in json {
+                                            let newProject = Project()
+                                            newProject.repTitleLabel = value["name"].string!
+                                            newProject.languageLabel = value["language"].stringValue
+                                            newProject.starsLabel = value["stargazers_count"].int!
+                                            newProject.branchesLabel = value["forks_count"].int!
+                                            user.repositories.append(newProject)
+                                        }
+                                        completion(user: user)
+                                    }
+                                case .Failure(let error):
+                                    print(error)
+                                }
+                        }
+                        //----Get Repositories
+                    }
                 case .Failure(let error):
                     print(error)
+                    completion(user: nil)
                 }
         }
     }
     
 }
+
+
+//dynamic var repTitleLabel = ""
+//dynamic var languageLabel = ""
+//dynamic var starsLabel = ""
+//dynamic var branchesLabel = ""

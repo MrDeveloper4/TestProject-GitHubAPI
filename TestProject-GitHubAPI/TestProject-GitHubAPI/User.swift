@@ -13,11 +13,11 @@ class User: Object {
     dynamic var id = ""
     dynamic var userAvatarImageView = ""
     dynamic var userBioLabel = ""
-    dynamic var followersCountLabel = ""
-    dynamic var followingCountLabel = ""
-    dynamic var publicGistsLabel = ""
-    dynamic var publicReposLabel = ""
-    let repositories = List<Project>()
+    dynamic var followersCountLabel = 0
+    dynamic var followingCountLabel = 0
+    dynamic var publicGistsLabel = 0
+    dynamic var publicReposLabel = 0
+    var repositories = List<Project>()
     
     override static func primaryKey() -> String? {
         return "id"
