@@ -24,7 +24,6 @@ class MainVC: UIViewController, UITextFieldDelegate {
         
         inputTextField.delegate = self
         
-        //set BarButton image
         let button = UIButton(type: .Custom)
         button.setImage(UIImage(named: "icon"), forState: UIControlState.Normal)
         button.addTarget(self, action:nil, forControlEvents: UIControlEvents.TouchDragInside)
@@ -92,7 +91,7 @@ class MainVC: UIViewController, UITextFieldDelegate {
     func keyboardHide(notification: NSNotification) {
         let info  = notification.userInfo!
         let value: AnyObject = info[UIKeyboardFrameEndUserInfoKey]!
-        
+        //useless comment sample
         let rawFrame = value.CGRectValue
         let keyboardFrame = view.convertRect(rawFrame, fromView: nil)
         keyBoardHeight = keyboardFrame.size.height
