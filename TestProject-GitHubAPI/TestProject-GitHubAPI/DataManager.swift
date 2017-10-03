@@ -26,7 +26,7 @@ class DataManager: NSObject {
         try! realm.write {
             realm.add(user, update: true)
         }
-        //If user is in a dataBase we simply update the info
+        //If user is in a dataBase we will simply update the info
     }
     
     class func removeUserWithId(id : String) {
